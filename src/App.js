@@ -46,6 +46,21 @@ function App() {
     }
   }
 
+
+  const clearItems = () =>{
+    setExpenses([]);
+
+  }
+
+  const handleDelete = (id) => {
+
+  }
+  const handleEdit = (id) => {
+
+  }
+
+
+
   return (
     <>
     {alert.show && <Alert type={alert.type} text={alert.text}></Alert>}
@@ -53,7 +68,7 @@ function App() {
       <h1>budget calculator</h1>
       <main className="App">
       <ExpenseForm handleAmount={handleAmount}  handleCharge={handleCharge}  handleSubmit={handleSubmit} charge={charge} amount={amount} />
-      <ExpenseList expenses={expenses} />
+      <ExpenseList expenses={expenses} handleDelete={handleDelete}  handleEdit={handleEdit} clearItems={clearItems}  />
       </main>
       <h1>
         total spending : <span className="total">
